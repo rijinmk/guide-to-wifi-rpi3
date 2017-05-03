@@ -8,9 +8,9 @@ This is for people who already has an OS installed on their Raspberry Pi and don
 
 * Insert your SD card with the OS in it.
 * Power up your Raspberry Pi 3 using a Micro USB charger. 
-* Connect your keyboard
-* Connect your screen to see whats happening
-* Open terminals by pressing CTRL + ALT + T
+* Connect your keyboard.
+* Connect your screen to see whats happening.
+* Open terminals by pressing CTRL + ALT + T.
 
 ### STEP 2 - TERMINAL COMMANDS
 
@@ -18,12 +18,12 @@ This is for people who already has an OS installed on their Raspberry Pi and don
 ```bash
 cd /etc/
 ```
-* In that there will be a folder named *wpa_supplicant*, Get into that folder.
+* In this folder there will be another folder named, *wpa_supplicant*, open the folder.
 ```bash
 cd wpa_supplicant
 ```
 * Here you have to edit the file named *wpa_supplicant.conf*
-* We are going to use terminals nano text editor to do that.
+* To do so, we use terminals nano text editor.
 * We have to be a Super User to make changes to this file, hence we have to use *sudo* 
 ```bash
 sudo nano wpa_supplicant.conf
@@ -48,7 +48,7 @@ network={
 ```
 * If not, you wont see the *network={...}* 
 * What we have to understand is that *network={...}* is EACH network that we connected to in the past. 
-* Now, We have to add our own *network={...}*, We can do that like this, *ADD THIS TO THE END OF THE FILE*: 
+* Now, We have to add our own *network={...}*, We can do that by adding this to the end of the file: 
 ```bash 
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
